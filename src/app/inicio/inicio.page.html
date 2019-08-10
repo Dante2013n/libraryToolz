@@ -1,0 +1,50 @@
+<ion-content class="fondo">
+  <ion-slides pager="true" class="texto">
+    <ion-slide>
+        <ion-card class="tam">
+            <ion-card-header>
+              <ion-img src="/assets/LibrosQR.jpg"></ion-img>
+            </ion-card-header>
+            <ion-card-content>
+              Facilita el acceso a los libros de tu biblioteca.
+            </ion-card-content>
+        </ion-card>
+    </ion-slide>
+    <ion-slide>
+        <ion-card class="tam">
+            <ion-card-header>
+              <ion-img src="/assets/QRLibro.jpg"></ion-img>
+            </ion-card-header>
+            <ion-card-content>
+              Agiliza tu trabajo.
+            </ion-card-content>
+        </ion-card>
+    </ion-slide>
+    <ion-slide>
+        <ion-card class="tam">
+            <ion-card-header>
+              <ion-img src="/assets/ejemplo.jpg"></ion-img>
+            </ion-card-header>
+            <ion-card-content>
+              LibraryTool mejora tu biblioteca.
+            </ion-card-content>
+        </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <firebase-ui></firebase-ui>
+        <h3 *ngIf="afAuth.auth.currentUser" class="texto">
+          Bienvenido {{afAuth.auth.currentUser.displayName}}!
+        </h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" *ngIf="afAuth.auth.currentUser" routerLink="/home" center>CONTINUAR</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

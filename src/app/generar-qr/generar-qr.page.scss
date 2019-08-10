@@ -1,0 +1,55 @@
+.fondo{
+    --background: #314755;  /* fallback for old browsers */
+    --background: -webkit-linear-gradient(to right, #26a0da, #314755);  /* Chrome 10-25, Safari 5.1-6 */
+    --background: linear-gradient(to right, #26a0da, #314755); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.texto{
+    -webkit-text-fill-color: white;
+    text-align: center;
+}
+
+.verTxt{
+    -webkit-text-fill-color: black;
+}
+
+.tamTexto{
+    --font-size: 15px;
+}
+
+.tam{
+    width: 180px;
+    height: 280px;
+    align-content: center;
+}
+
+.row {
+    align-items: center;
+    text-align: center;
+  }
+
+  .item {
+      border-radius: 20px ;
+      padding-left: 30px ;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+      border: 1px solid white;
+      border-bottom: 0px;
+      box-shadow: none;
+  }
+
+  .signup-col {
+    margin: 0px 16px 0px 16px;
+    padding-bottom: 20px;
+  }
+
+  .item-inner {
+    border-bottom-color: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .submit-btn {
+    background: #51CFB1;
+    border-radius: 30px !important;
+    border: 1px solid #ffffff;
+  }

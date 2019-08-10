@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="fondo texto">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" icon="arrow-round-back" defaultHref="home">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Escaner</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="fondo texto">
+  <h1>Presione el boton para escanear un libro</h1>
+
+  <ion-button expand="full" (click)="scanCode()">Escanear Codigo</ion-button>
+
+  <div *ngIf="scannedData">
+    <ion-label class="tamTexto">
+      Informacion del libro: 
+    </ion-label>
+    <br>
+    <b>
+      {{scannedData['text']}}
+    </b>
+    <p>Formato del codigo: <b>{{scannedData['format']}}</b></p>
+  </div>
+
+
+
+  <!--<ion-input type="text" [(ngModel)]="encodeData" ></ion-input>
+  <ion-button expand="full" (click)="encodedText()">Encode Text</ion-button>-->
+</ion-content>

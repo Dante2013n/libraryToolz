@@ -1,0 +1,7 @@
+{
+  "name": "LibraryToolZ",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

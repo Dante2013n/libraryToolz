@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar class="fondo texto">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" icon="arrow-round-back" defaultHref="home">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Generar codigos QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="fondo texto">
+  <h1>Rellene todos los campos y presione el boton para generar un codigo QR</h1>  
+
+  <ion-grid class="verTxt">
+    <ion-row class="row">
+      <ion-col>
+        <ion-list inset>
+          <ion-item class="item">
+            <ion-icon name="today" slot="start"></ion-icon>
+            <ion-input type="text" [(ngModel)] = "titulo" placeholder="Titulo" required></ion-input>
+          </ion-item>
+          <ion-item class="item">
+            <ion-icon name="man" slot="start"></ion-icon>
+            <ion-input type="text" [(ngModel)] = "autor" placeholder="Autor" required></ion-input>
+          </ion-item>
+          <ion-item class="item">
+            <ion-icon name="happy" slot="start"></ion-icon>
+            <ion-input type="text" [(ngModel)] = "genero" placeholder="Genero" required></ion-input>
+          </ion-item>
+          <ion-item class="item">
+            <ion-icon name="star" slot="start"></ion-icon>
+            <ion-input type="text" [(ngModel)] = "calificacion" placeholder="Calificacion" required></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="full" (click)="encodedText()">Encode Text</ion-button>
+
+  <!--<ion-button expand="full" (click)="scanCode()">Escanear Codigo</ion-button>
+  
+  <div *ngIf="scannedData">
+    <ion-label class="tamTexto">
+      Informacion del libro: 
+    </ion-label>
+    <br>
+    <b>
+      {{scannedData['text']}}
+    </b>
+    <p>Formato del codigo: <b>{{scannedData['format']}}</b></p>
+  </div>-->
+  
+    <!--<ion-input type="text" [(ngModel)]="encodeData" ></ion-input>
+    <ion-button expand="full" (click)="encodedText()">Encode Text</ion-button>-->
+</ion-content>

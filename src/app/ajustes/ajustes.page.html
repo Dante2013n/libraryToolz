@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar class="fondo texto">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" icon="arrow-round-back" defaultHref="home">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Mi Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3 *ngIf="afAuth.auth.currentUser" class="texto">
+          Hasta pronto {{afAuth.auth.currentUser.displayName}}!
+        </h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" *ngIf="afAuth.auth.currentUser" (click)="signOut()" routerLink="/inicio">Cerrar sesion</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
